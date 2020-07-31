@@ -170,23 +170,123 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="Models\PersonModel.cs" />
+    <Compile Include="Models\StartPageModel.cs" />
+    <Compile Include="Models\WireModel.cs" />
+    <Compile Include="ViewModels\PasswordsViewModel.cs" />
+    <Compile Include="ViewModels\MazeViewModel.cs" />
+    <Compile Include="ViewModels\WireSequenceViewModel.cs" />
+    <Compile Include="ViewModels\CompWiresViewModel.cs" />
+    <Compile Include="ViewModels\StartPageViewModel.cs" />
+    <Compile Include="ViewModels\MorseCodeViewModel.cs" />
+    <Compile Include="ViewModels\WhosOnFirstViewModel.cs" />
+    <Compile Include="ViewModels\SimonSaysViewModel.cs" />
+    <Compile Include="ViewModels\KeypadViewModel.cs" />
+    <Compile Include="ViewModels\ButtonViewModel.cs" />
+    <Compile Include="ViewModels\WireViewModel.cs" />
+    <Compile Include="ViewModels\MemoryViewModel.cs" />
+    <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="Views\PasswordsView.xaml.cs">
+      <DependentUpon>PasswordsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MazeView.xaml.cs">
+      <DependentUpon>MazeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WireSequenceView.xaml.cs">
+      <DependentUpon>WireSequenceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CompWIresView.xaml.cs">
+      <DependentUpon>CompWIresView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartPageView.xaml.cs">
+      <DependentUpon>StartPageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MorseCodeView.xaml.cs">
+      <DependentUpon>MorseCodeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WhosOnFIrstView.xaml.cs">
+      <DependentUpon>WhosOnFIrstView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SimonSaysView.xaml.cs">
+      <DependentUpon>SimonSaysView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ButtonView.xaml.cs">
+      <DependentUpon>ButtonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KeypadView.xaml.cs">
+      <DependentUpon>KeypadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WireView.xaml.cs">
+      <DependentUpon>WireView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MemoryView.xaml.cs">
+      <DependentUpon>MemoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellView.xaml.cs">
+      <DependentUpon>ShellView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="functions.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="UserFunctions.cs" />
     <Compile Include="GameConstants.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="Views\PasswordsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MazeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WireSequenceView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CompWIresView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\StartPageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MorseCodeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WhosOnFIrstView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SimonSaysView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ButtonView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\KeypadView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WireView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MemoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="modules\Memory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -279,6 +379,9 @@
     <Content Include="assets\maze\maze7.svg" />
     <Content Include="assets\maze\maze8.svg" />
     <Content Include="assets\morse\morse-signals.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="modules\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.2.1\build\Fody.targets" Condition="Exists('..\packages\Fody.4.2.1\build\Fody.targets')" />

@@ -67,7 +67,7 @@
             <!-- Start Memory Module -->
 
             <TabItem Header="MEMORY" Name="Memory">
-                <Grid>
+                Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="32"/>
                         <RowDefinition Height="*" />
@@ -162,7 +162,7 @@
 
                     <Button Tag="Mem_Reset_Btn" Name="Mem_Reset_Btn" Grid.Row="6" Grid.Column="4" Content="Reset All" Padding="5" Click="ClearMemoryBoxes" />
 
-                </Grid>
+                <Grid />
             </TabItem>
 
             <!-- End Memory Module -->

@@ -1,40 +1,32 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using MahApps.Metro.Controls;
 
 namespace KTaNE
 {
-     public static class Functions
+    public class UserFunctions
     {
+        public UserFunctions()
+        {
+        }
+
         public static string Test(int num)
         {
             return "TeSt " + num;
         }
 
-        public static void ResetLabelValue(object l)
+        
+
+        public static void ResetLabelValue(Label l)
         {
-            var i = (Label)l;
-            if (i == null) return;
-            i.Content = string.Empty;
+            if (l != null) l.Content = string.Empty;
         }
 
-        public static void ResetTextBoxValue(object t)
+        public static void ResetTextBoxValue(TextBox t)
         {
-            var i = (TextBox)t;
-            if (i == null) return;
-            i.Text = string.Empty;
+            if (t != null) t.Text = string.Empty;
         }
 
         public static void ResetTextBlockValue(object l)
@@ -49,6 +41,10 @@ namespace KTaNE
             e.Handled = !char.IsDigit(e.Text, e.Text.Length - 1); // Ensures only numbers can be entered to the Control
         }
 
+        public static bool IsNull(object o)
+        {
+            return (o == null);
+        }
 
         /// <summary>
         /// Finds a Child of a given item in the visual tree. 

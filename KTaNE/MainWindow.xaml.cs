@@ -51,8 +51,7 @@ namespace KTaNE
 
         private void ProgramStartup() // all the initialzation goes here
         {
-            Hoosker.Title = GameConstants.titlePrefix + " - V" + GameConstants.AssistantVersion;
-            //var f = new Functions();
+            Hoosker.Title = GameConstants.titlePrefix + " - V" + GameConstants.AssistantVersion;            
         }
 
         public void ManualClick(object sender, RoutedEventArgs e)
